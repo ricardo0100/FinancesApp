@@ -9,6 +9,9 @@
 import Foundation
 
 protocol CategoryGatewayProtocol {
+    
     func getAll() -> [CategoryModel]
     func save(category: CategoryModel) -> Bool
+    func getById(id: Int) -> CategoryModel?
+    
 }

@@ -11,13 +11,16 @@ import Foundation
 class CategoryGatewayInMemory: CategoryGatewayProtocol {
     
     var categoryList = [CategoryModel]()
+    var increment = 0
     
     func getAll() -> [CategoryModel] {
         return categoryList
     }
     
-    func save(category: CategoryModel) -> Bool {
+    func save(var category: CategoryModel) -> Bool {
         if validate(category) {
+            increment++
+            category.id = increment
             categoryList.append(category)
             return true
         } else {
@@ -31,4 +34,22 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         }
         return true
     }
+    
+    func getById(id: Int) -> CategoryModel? {
+        var category: CategoryModel?
+        for cat in categoryList {
+            if cat.id == id {
+                category = cat
+            }
+        }
+        return category
+    }
+    
+    func generateRandomCategories(numberOfCategories: Int) {
+        for index in 1...numberOfCategories {
+            let category = CategoryModel(id: index, name: "\(index)", color: nil)
+            categoryList += [category]
+        }
+    }
+    
 }

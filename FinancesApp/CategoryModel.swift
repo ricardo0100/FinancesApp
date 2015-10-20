@@ -9,7 +9,18 @@
 import Foundation
 
 struct CategoryModel {
+    
+    init() {
+    }
+    
+    init (id: Int, name: String, color: String?) {
+        self.id = id
+        self.name = name
+        self.color = color
+    }
+    
     var id: Int = 0
     var name: String = ""
     var color: String?
+    
 }
