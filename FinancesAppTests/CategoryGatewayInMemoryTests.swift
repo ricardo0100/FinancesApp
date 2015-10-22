@@ -11,6 +11,13 @@ import XCTest
 
 class CategoryGatewayInMemoryTests: XCTestCase {
     
+    let ID1 = 1
+    let NAME1 = "C1"
+    let ID2 = 2
+    let NAME2 = "C2"
+    let ID3 = 3
+    let NAME3 = "C3"
+    
     var gateway: CategoryGatewayProtocol = CategoryGatewayInMemory()
     
     func testGetAllCategoriesIsEmpty() {
@@ -19,7 +26,7 @@ class CategoryGatewayInMemoryTests: XCTestCase {
     
     func testSaveCategory() {
         var category = CategoryModel()
-        category.name = "Hey"
+        category.name = NAME1
         XCTAssertTrue(gateway.save(category))
         XCTAssertEqual(gateway.getAll().count, 1)
     }
@@ -31,13 +38,9 @@ class CategoryGatewayInMemoryTests: XCTestCase {
     }
     
     func testGetById() {
-        let ID1 = 1
-        let NAME1 = "C1"
         let category1 = CategoryModel(id: ID1, name: NAME1, color:"")
         gateway.save(category1)
         
-        let ID2 = 2
-        let NAME2 = "C2"
         let category2 = CategoryModel(id: ID2, name: NAME2, color:"")
         gateway.save(category2)
         
@@ -48,5 +51,25 @@ class CategoryGatewayInMemoryTests: XCTestCase {
         XCTAssertEqual(result2?.name, NAME2)
     }
     
+    func testFilterReturnsNothing() {
+        let category1 = CategoryModel(id: ID1, name: NAME1, color:"")
+        gateway.save(category1)
+        
+        let category2 = CategoryModel(id: ID2, name: NAME2, color:"")
+        gateway.save(category2)
+        
+        let result = gateway.filter(NAME3)
+        XCTAssertEqual(result.count, 0)
+    }
     
+    func testFilterReturnsOneResult() {
+        let category1 = CategoryModel(id: ID1, name: NAME1, color:"")
+        gateway.save(category1)
+        
+        let category2 = CategoryModel(id: ID2, name: NAME2, color:"")
+        gateway.save(category2)
+        
+        let result = gateway.filter(NAME1)
+        XCTAssertEqual(result.count, 1)
+    }
 }

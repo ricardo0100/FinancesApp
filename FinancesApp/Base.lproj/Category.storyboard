@@ -4,32 +4,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--List Categories Table View Controller-->
+        <!--Categories-->
         <scene sceneID="PRl-y7-O3t">
             <objects>
                 <tableViewController id="S8F-av-QHq" customClass="ListCategoriesTableViewController" customModule="FinancesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tI7-8k-TCq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tI7-8k-TCq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" textLabel="uu4-UC-UEh" style="IBUITableViewCellStyleDefault" id="drw-wh-2ZB">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CategoryCell" id="6r3-8n-NNS">
+                                <rect key="frame" x="0.0" y="114" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="drw-wh-2ZB" id="kwr-ys-bcR">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6r3-8n-NNS" id="RTG-Cg-MSO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uu4-UC-UEh">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -40,17 +30,30 @@
                             <outlet property="delegate" destination="S8F-av-QHq" id="Txe-dx-m47"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XTV-eq-CXb"/>
+                    <navigationItem key="navigationItem" title="Categories" id="XTV-eq-CXb"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Pco-tS-coX" id="CUQ-wx-3zA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUY-1m-NO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Pco-tS-coX">
+                    <connections>
+                        <outlet property="delegate" destination="S8F-av-QHq" id="SJu-7W-g8P"/>
+                        <outlet property="searchContentsController" destination="S8F-av-QHq" id="YyR-6O-QtU"/>
+                        <outlet property="searchResultsDataSource" destination="S8F-av-QHq" id="HQo-pW-cyN"/>
+                        <outlet property="searchResultsDelegate" destination="S8F-av-QHq" id="fOt-4r-YVX"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1106" y="370"/>
+            <point key="canvasLocation" x="836" y="370"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W57-1y-CgD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b4U-Vk-LjL" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dbI-em-Z92">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

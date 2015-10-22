@@ -15,11 +15,20 @@ class ListCategoriesTableViewController: UITableViewController {
     var categoryGateway = CategoryGatewayInMemory()
     var categoryList: [CategoryModel]?
     
+    var searchController: UISearchController!
+    var categorySearchTableViewController: CategorySearchTableViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryGateway.generateRandomCategories(20)
+        categoryGateway.generateRandomCategories(50)
         categoryList = categoryGateway.getAll()
+        
+        categorySearchTableViewController = CategorySearchTableViewController()
+        searchController = UISearchController(searchResultsController: categorySearchTableViewController)
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.dimsBackgroundDuringPresentation = false
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

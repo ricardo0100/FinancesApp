@@ -13,6 +13,8 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     var categoryList = [CategoryModel]()
     var increment = 0
     
+    // MARK: - GatewayProtocol Implementation
+    
     func getAll() -> [CategoryModel] {
         return categoryList
     }
@@ -45,9 +47,37 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         return category
     }
     
+    func filter(text: String) -> [CategoryModel] {
+        var filteredList: [CategoryModel] = []
+        
+        for cat in categoryList {
+            if cat.name.containsString(text) {
+                filteredList.append(cat)
+            }
+        }
+        
+        return filteredList
+    }
+    
+    // MARK: - Random Categories
+    
+    let randomWords = ["Here's", "what", "this", "looks", "like", "when", "running", "Notice", "that", "unlike", "in", "the", "search", "display", "controller", "example", "we", "are", "using", "the", "same", "table", "view", "to", "display", "the", "search", "results", "instead", "of", "overlaying", "of", "a", "separate", "table", "view", "However", "unlike", "when", "working", "with", "just", "the", "search", "bar", "we", "still", "have", "the", "built", "in", "animation", "when", "transitioning", "to", "the", "search", "interface"]
+    
+    func randomInt(min min: Int, max: Int) -> Int {
+        if max < min { return min }
+        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
+    }
+    
+    func randomWord() -> String {
+        let numberOfAvailableRandomWords = randomWords.count
+        let diceRoll = randomInt(min: 0, max: numberOfAvailableRandomWords - 1)
+        
+        return randomWords[diceRoll]
+    }
+    
     func generateRandomCategories(numberOfCategories: Int) {
         for index in 1...numberOfCategories {
-            let category = CategoryModel(id: index, name: "\(index)", color: nil)
+            let category = CategoryModel(id: index, name: randomWord(), color: nil)
             categoryList += [category]
         }
     }
