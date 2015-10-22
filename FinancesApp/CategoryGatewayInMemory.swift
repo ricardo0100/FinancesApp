@@ -13,17 +13,27 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     var categoryList = [CategoryModel]()
     var increment = 0
     
+    // MARK: Init
+
+    init() {
+    }
+    
+    init(with numberOfRandomWords: Int) {
+        generateRandomCategories(numberOfRandomWords)
+    }
+    
     // MARK: - GatewayProtocol Implementation
     
-    func getAll() -> [CategoryModel] {
+    func all() -> [CategoryModel] {
         return categoryList
     }
     
-    func save(var category: CategoryModel) -> Bool {
-        if validate(category) {
+    func save(category: CategoryModel) -> Bool {
+        var register = category
+        if validate(register) {
             increment++
-            category.id = increment
-            categoryList.append(category)
+            register.id = increment
+            categoryList.append(register)
             return true
         } else {
             return false
@@ -37,7 +47,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         return true
     }
     
-    func getById(id: Int) -> CategoryModel? {
+    func register(with id: Int) -> CategoryModel? {
         var category: CategoryModel?
         for cat in categoryList {
             if cat.id == id {
@@ -47,7 +57,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         return category
     }
     
-    func filter(text: String) -> [CategoryModel] {
+    func register(with text: String) -> [CategoryModel] {
         var filteredList: [CategoryModel] = []
         
         for cat in categoryList {

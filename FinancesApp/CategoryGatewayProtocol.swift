@@ -10,9 +10,9 @@ import Foundation
 
 protocol CategoryGatewayProtocol {
     
-    func getAll() -> [CategoryModel]
+    func all() -> [CategoryModel]
     func save(category: CategoryModel) -> Bool
-    func getById(id: Int) -> CategoryModel?
-    func filter(text: String) -> [CategoryModel]
+    func register(with id: Int) -> CategoryModel?
+    func register(with text: String) -> [CategoryModel]
     
 }

@@ -11,21 +11,23 @@ import UIKit
 class ListCategoriesTableViewController: UITableViewController {
     
     let CellIdentificator = "CategoryCell"
+    let numberOfWords: Int = 50
     
-    var categoryGateway = CategoryGatewayInMemory()
+    var categoryGateway: CategoryGatewayProtocol!
     var categoryList: [CategoryModel]?
     
     var searchController: UISearchController!
     var categorySearchTableViewController: CategorySearchTableViewController!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryGateway.generateRandomCategories(50)
-        categoryList = categoryGateway.getAll()
-        
+        categoryGateway = CategoryGatewayInMemory(with: numberOfWords)
         categorySearchTableViewController = CategorySearchTableViewController()
         searchController = UISearchController(searchResultsController: categorySearchTableViewController)
+        
+        categoryList = categoryGateway.all()
+        
         tableView.tableHeaderView = searchController.searchBar
         
         searchController.dimsBackgroundDuringPresentation = false
