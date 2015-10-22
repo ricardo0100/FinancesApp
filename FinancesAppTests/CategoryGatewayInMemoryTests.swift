@@ -72,4 +72,15 @@ class CategoryGatewayInMemoryTests: XCTestCase {
         let result = categoryGateway.register(with: NAME1)
         XCTAssertEqual(result.count, 1)
     }
+    
+    func testFilterReturnsTwoResults() {
+        let category1 = CategoryModel(id: ID1, name: NAME1, color:"")
+        categoryGateway.save(category1)
+        
+        let category2 = CategoryModel(id: ID2, name: NAME1, color:"")
+        categoryGateway.save(category2)
+        
+        let result = categoryGateway.register(with: NAME1)
+        XCTAssertEqual(result.count, 2)
+    }
 }
