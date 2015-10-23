@@ -7,17 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA9C34251BD886C60061406B /* CategorySearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C34241BD886C60061406B /* CategorySearchTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */; };
 		BAF8A4001BD57C5A00443384 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A3FE1BD57C5A00443384 /* Category.storyboard */; };
 		BAF8A4021BD57C5A00443384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A4011BD57C5A00443384 /* Assets.xcassets */; };
 		BAF8A4051BD57C5A00443384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */; };
 		BAF8A4101BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A40F1BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift */; };
 		BAF8A41B1BD57C5A00443384 /* FinancesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A41A1BD57C5A00443384 /* FinancesAppUITests.swift */; };
-		BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A42A1BD5814700443384 /* CategoryModel.swift */; settings = {ASSET_TAGS = (); }; };
-		BAF8A42E1BD5899900443384 /* CategoryGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A42D1BD5899900443384 /* CategoryGatewayProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A4381BD597DC00443384 /* CategoryGatewayInMemory.swift */; settings = {ASSET_TAGS = (); }; };
+		BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A42A1BD5814700443384 /* CategoryModel.swift */; };
+		BAF8A42E1BD5899900443384 /* CategoryGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A42D1BD5899900443384 /* CategoryGatewayProtocol.swift */; };
+		BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */; };
+		BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A4381BD597DC00443384 /* CategoryGatewayInMemory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BA9C34241BD886C60061406B /* CategorySearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategorySearchTableViewController.swift; sourceTree = "<group>"; };
 		BAF8A3F71BD57C5A00443384 /* FinancesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF8A3FF1BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Category.storyboard; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
-				BA9C34241BD886C60061406B /* CategorySearchTableViewController.swift */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -310,7 +307,6 @@
 				BAF8A42E1BD5899900443384 /* CategoryGatewayProtocol.swift in Sources */,
 				BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */,
 				BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */,
-				BA9C34251BD886C60061406B /* CategorySearchTableViewController.swift in Sources */,
 				BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */,
 				BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */,
 			);

@@ -58,6 +58,10 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     }
     
     func register(with text: String) -> [CategoryModel] {
+        if text.isEmpty {
+            return all()
+        }
+        
         var filteredList: [CategoryModel] = []
         
         for cat in categoryList {
