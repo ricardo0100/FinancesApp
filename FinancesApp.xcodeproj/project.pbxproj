@@ -80,6 +80,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA4955881BDC223B00169B4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA49558E1BDC2F8600169B4D /* Assets */,
+				BA49558B1BDC2F5000169B4D /* Storyboard */,
+				BA49558D1BDC2F6D00169B4D /* App */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BA4955891BDC2EC000169B4D /* Model View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model View";
+			sourceTree = "<group>";
+		};
+		BA49558A1BDC2ED600169B4D /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BA49558B1BDC2F5000169B4D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */,
+				BAF8A3FE1BD57C5A00443384 /* Category.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		BA49558D1BDC2F6D00169B4D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */,
+				BAF8A4061BD57C5A00443384 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BA49558E1BDC2F8600169B4D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A4011BD57C5A00443384 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		BAF8A3EE1BD57C5A00443384 = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +154,10 @@
 		BAF8A3F91BD57C5A00443384 /* FinancesApp */ = {
 			isa = PBXGroup;
 			children = (
-				BAF8A3FE1BD57C5A00443384 /* Category.storyboard */,
-				BAF8A42F1BD589C400443384 /* AppFiles */,
-				BAF8A4291BD5812D00443384 /* Models */,
-				BAF8A42C1BD5898000443384 /* Gateways */,
-				BAF8A4301BD589E000443384 /* Modules */,
+				BA4955881BDC223B00169B4D /* View */,
+				BA49558A1BDC2ED600169B4D /* View Controller */,
+				BA4955891BDC2EC000169B4D /* Model View */,
+				BAF8A4291BD5812D00443384 /* Model */,
 			);
 			path = FinancesApp;
 			sourceTree = "<group>";
@@ -130,48 +180,22 @@
 			path = FinancesAppUITests;
 			sourceTree = "<group>";
 		};
-		BAF8A4291BD5812D00443384 /* Models */ = {
+		BAF8A4291BD5812D00443384 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAF8A42C1BD5898000443384 /* Gateway */,
 				BAF8A42A1BD5814700443384 /* CategoryModel.swift */,
 			);
-			name = Models;
+			name = Model;
 			sourceTree = "<group>";
 		};
-		BAF8A42C1BD5898000443384 /* Gateways */ = {
+		BAF8A42C1BD5898000443384 /* Gateway */ = {
 			isa = PBXGroup;
 			children = (
 				BAF8A42D1BD5899900443384 /* CategoryGatewayProtocol.swift */,
 				BAF8A4381BD597DC00443384 /* CategoryGatewayInMemory.swift */,
 			);
-			name = Gateways;
-			sourceTree = "<group>";
-		};
-		BAF8A42F1BD589C400443384 /* AppFiles */ = {
-			isa = PBXGroup;
-			children = (
-				BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */,
-				BAF8A4011BD57C5A00443384 /* Assets.xcassets */,
-				BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */,
-				BAF8A4061BD57C5A00443384 /* Info.plist */,
-			);
-			name = AppFiles;
-			sourceTree = "<group>";
-		};
-		BAF8A4301BD589E000443384 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				BAF8A4321BD58A4700443384 /* Category */,
-			);
-			name = Modules;
-			sourceTree = "<group>";
-		};
-		BAF8A4321BD58A4700443384 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
-			);
-			name = Category;
+			name = Gateway;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -13,6 +13,7 @@ class ListCategoriesTableViewController: UITableViewController, UISearchResultsU
     let cellIdentificator = "CategoryCell"
     let numberOfWords: Int = 50
     
+    //TODO: Replace gateway from View Controller to Model View Layer
     var categoryGateway: CategoryGatewayProtocol!
     var categoryList: [CategoryModel]?
     
@@ -28,7 +29,7 @@ class ListCategoriesTableViewController: UITableViewController, UISearchResultsU
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchBar.sizeToFit()
-        searchController.dimsBackgroundDuringPresentation = false
+
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
     }
