@@ -56,4 +56,9 @@ class ListCategoriesTableViewController: UITableViewController, UISearchResultsU
         tableView.reloadData()
     }
     
+    //MARK: Unwind Segues
+    
+    @IBAction func backToListCategoriesTableViewController(segue:UIStoryboardSegue) {
+    }
+    
 }

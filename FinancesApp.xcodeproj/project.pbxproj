@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */; };
 		BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */; };
 		BAF8A4001BD57C5A00443384 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A3FE1BD57C5A00443384 /* Category.storyboard */; };
 		BAF8A4021BD57C5A00443384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A4011BD57C5A00443384 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryTableViewController.swift; sourceTree = "<group>"; };
 		BAF8A3F71BD57C5A00443384 /* FinancesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF8A3FF1BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Category.storyboard; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
+				BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */,
 				BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */,
 				BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */,
+				BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */,
 				BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
