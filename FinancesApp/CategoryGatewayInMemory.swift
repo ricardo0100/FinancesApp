@@ -92,7 +92,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     }
     
     func generateRandomCategories(numberOfCategories: Int) {
-        for index in 1...numberOfCategories {
+        for index in 0..<numberOfCategories {
             let category = CategoryModel(id: index, name: randomWord(), color: nil)
             categoryList += [category]
         }
