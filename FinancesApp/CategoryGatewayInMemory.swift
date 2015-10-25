@@ -10,7 +10,7 @@ import Foundation
 
 class CategoryGatewayInMemory: CategoryGatewayProtocol {
     
-    static let sharedInstance = CategoryGatewayInMemory(with: 50)
+    static let sharedInstance = CategoryGatewayInMemory(with: 0)
     
     var categoryList = [CategoryModel]()
     var increment = 0
