@@ -10,7 +10,7 @@ import Foundation
 
 class CategoryGatewayInMemory: CategoryGatewayProtocol {
     
-    static let sharedInstance = CategoryGatewayInMemory(with: 0)
+    static let sharedInstance = CategoryGatewayInMemory(withExamples: true)
     
     var categoryList = [CategoryModel]()
     var increment = 0
@@ -18,6 +18,12 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     // MARK: Init
 
     init() {
+    }
+
+    init(withExamples showExamples: Bool) {
+        if showExamples {
+            generateExampleCategories()
+        }
     }
     
     init(with numberOfRandomWords: Int) {
@@ -75,7 +81,19 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         return filteredList
     }
     
-    // MARK: - Random Categories
+    //MARK: Example Categories
+    
+    let exampleCategories = ["Restaurant", "Transportation", "Health", "Party"]
+    
+    func generateExampleCategories() {
+        for index in 0..<exampleCategories.count {
+            let name = exampleCategories[index]
+            let category = CategoryModel(id: index, name: name, color: nil)
+            categoryList += [category]
+        }
+    }
+    
+    //MARK: Random Categories
     
     let randomWords = ["Here's", "what", "this", "looks", "like", "when", "running", "Notice", "that", "unlike", "in", "the", "search", "display", "controller", "example", "we", "are", "using", "the", "same", "table", "view", "to", "display", "the", "search", "results", "instead", "of", "overlaying", "of", "a", "separate", "table", "view", "However", "unlike", "when", "working", "with", "just", "the", "search", "bar", "we", "still", "have", "the", "built", "in", "animation", "when", "transitioning", "to", "the", "search", "interface"]
     
