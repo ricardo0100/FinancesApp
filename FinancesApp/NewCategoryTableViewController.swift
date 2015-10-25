@@ -10,7 +10,21 @@ import UIKit
 
 class NewCategoryTableViewController: UITableViewController {
 
+    //TODO: Replace gateway from View Controller to Model View Layer
+    var categoryGateway: CategoryGatewayProtocol = CategoryGatewayInMemory.sharedInstance
+    
+    //MARK: Outlets
+    
+    @IBOutlet weak var categoryNameTextField: UITextField!
+    
+    //MARK: Actions
+    
     @IBAction func saveCategoryPressed(sender: UIBarButtonItem) {
+        var newCategory = CategoryModel()
+        newCategory.name = categoryNameTextField.text!
+        
+        categoryGateway.save(newCategory)
+
         performSegueWithIdentifier("backToListCategoriesTableViewController", sender: sender)
     }
     

@@ -157,10 +157,10 @@
 		BAF8A3F91BD57C5A00443384 /* FinancesApp */ = {
 			isa = PBXGroup;
 			children = (
+				BAF8A4291BD5812D00443384 /* Model */,
 				BA4955881BDC223B00169B4D /* View */,
 				BA49558A1BDC2ED600169B4D /* View Controller */,
 				BA4955891BDC2EC000169B4D /* Model View */,
-				BAF8A4291BD5812D00443384 /* Model */,
 			);
 			path = FinancesApp;
 			sourceTree = "<group>";

@@ -11,10 +11,9 @@ import UIKit
 class ListCategoriesTableViewController: UITableViewController, UISearchResultsUpdating {
     
     let cellIdentificator = "CategoryCell"
-    let numberOfWords: Int = 50
     
     //TODO: Replace gateway from View Controller to Model View Layer
-    var categoryGateway: CategoryGatewayProtocol!
+    var categoryGateway: CategoryGatewayProtocol = CategoryGatewayInMemory.sharedInstance
     var categoryList: [CategoryModel]?
     
     var searchController: UISearchController!
@@ -22,7 +21,6 @@ class ListCategoriesTableViewController: UITableViewController, UISearchResultsU
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        categoryGateway = CategoryGatewayInMemory(with: numberOfWords)
         categoryList = categoryGateway.all()
         
         searchController = UISearchController(searchResultsController: nil)
