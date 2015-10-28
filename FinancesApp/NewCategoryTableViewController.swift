@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Color_Picker_for_iOS
 
 class NewCategoryTableViewController: UITableViewController {
 
@@ -16,6 +17,17 @@ class NewCategoryTableViewController: UITableViewController {
     //MARK: Outlets
     
     @IBOutlet weak var categoryNameTextField: UITextField!
+    @IBOutlet weak var colorPickerView: HRColorPickerView!
+    @IBOutlet weak var colorPickerMapView: HRColorMapView!
+    
+    //MARK: ViewController Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        colorPickerView.colorMapView = colorPickerMapView
+//        colorPickerView.addTarget(self, action: "colorChanged:", forControlEvents: UIControlEvents.ValueChanged)
+    }
     
     //MARK: Actions
     
@@ -26,6 +38,10 @@ class NewCategoryTableViewController: UITableViewController {
         categoryGateway.save(newCategory)
 
         performSegueWithIdentifier("backToListCategoriesTableViewController", sender: sender)
+    }
+    
+    @IBAction func colorChanged(sender: HRColorPickerView) {
+        
     }
     
 }

@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049234E79644050BD82B3C42DA42ADCD /* UIImage+CoreGraphics.h in Headers */ = {isa = PBXBuildFile; fileRef = 177C47162158588F72324C81347CC77C /* UIImage+CoreGraphics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06F9D5B0A08F646898261BB65A217B1F /* HRColorInfoView.h in Headers */ = {isa = PBXBuildFile; fileRef = 79CBA717F2BE884930E8AF1F61B40DB4 /* HRColorInfoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13D5F2F5EE87B9173C53DAC4AF5CFCF7 /* HRColorCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E7DE0EFAE38310C265CFD96A6433372 /* HRColorCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21C6C243493DDC45B6EBB5205AE74643 /* HRBrightnessSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C46FA6CA6AC7E01A01B995354E15714E /* HRBrightnessSlider.m */; };
+		253365ED746B376833EE612310217FB8 /* HRColorPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 63E0FEF1EDA0D3356EA9FE82AC976F2C /* HRColorPickerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29AB211B9BBC794A201AF32834D14EB3 /* HRColorMapView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A7E56788736FE60AD388F1D864B6D5 /* HRColorMapView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE641433C1E1EC5AEF783E38FA16F42 /* Color-Picker-for-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C152FD0BDAB2375A3168E97178728A93 /* Color-Picker-for-iOS-dummy.m */; };
+		4D8CDD78D5F0266C4E6DECAD324878E9 /* HRBrightnessCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = BD822A3BC979A6543892D00E2EDFFC92 /* HRBrightnessCursor.m */; };
+		563AE4C208F246E5CF42D2F83037BC2B /* HRColorInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FBBBFA8DCCD318FACDDB2A5EE148AA3 /* HRColorInfoView.m */; };
+		5E8BE0D6CDAC94F1F96D19102887CD10 /* Color-Picker-for-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 502CDBFC3BE8820A4643C45B6BFDE2CD /* Color-Picker-for-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6243C1A85B34FB65BE030159586F1BF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		7602520BBA74AE3DCD1DED13E107372A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		786D660F8ADBE96EA2C9298FB2B228BD /* HRHSVColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 60952B972B22C444E39ED25E8B99A71A /* HRHSVColorUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		979979057E77525A3108142C327633BB /* UIImage+CoreGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = B21F94B89AD40C87F761ED861C0DF77A /* UIImage+CoreGraphics.m */; };
+		9A1F98992EC06BA159A2EB68BC1EA9CA /* Pods-FinancesApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BA94BCAFAD14FEFAD03067916A1EDF2 /* Pods-FinancesApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A18632479F59E1C4B3241E9368AE1BA6 /* HRBrightnessCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 24953B8E75359DF87FBD88937512A7D5 /* HRBrightnessCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1F209F1B36DFD46F1CA5361E56A60CE /* HRBrightnessSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDB71621B5B3C171D4ADE37A3AA36D4 /* HRBrightnessSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0271C33FE3B15172E01119CA620703D /* HRColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4281B1E63B6EDC164E18B8B0579C1CE5 /* HRColorPickerView.m */; };
+		C9ED838DBDF07B56482212342D844739 /* HRColorCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ABFC7785D05057F0FF70B75A6AB56F1 /* HRColorCursor.m */; };
+		CDFCD7DF1DE5E29626250A8C1AAAD665 /* Pods-FinancesApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8958EF09B23A4F10B3777238B6D7A6CB /* Pods-FinancesApp-dummy.m */; };
+		E007D509CE8470E8D043A503B736C6FE /* HRColorMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4441A3B357E0844BD1BB66933679EC /* HRColorMapView.m */; };
+		F8863E62C9179AD71C5695B45002A7ED /* HRHSVColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AEBEC066D1CD08E13C4C15C8B26E32 /* HRHSVColorUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60541E89853FB80F0B9D8358875046B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D5C39A384113396D5D6A52DBD43367E5;
+			remoteInfo = "Color-Picker-for-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A7E56788736FE60AD388F1D864B6D5 /* HRColorMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorMapView.h; path = ColorPicker/HRColorMapView.h; sourceTree = "<group>"; };
+		177C47162158588F72324C81347CC77C /* UIImage+CoreGraphics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CoreGraphics.h"; path = "ColorPicker/UIImage+CoreGraphics.h"; sourceTree = "<group>"; };
+		1A1875A243E5858C9EB77F937A36EA38 /* Pods-FinancesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinancesApp.debug.xcconfig"; sourceTree = "<group>"; };
+		21AEBEC066D1CD08E13C4C15C8B26E32 /* HRHSVColorUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRHSVColorUtil.m; path = ColorPicker/HRHSVColorUtil.m; sourceTree = "<group>"; };
+		24953B8E75359DF87FBD88937512A7D5 /* HRBrightnessCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessCursor.h; path = ColorPicker/HRBrightnessCursor.h; sourceTree = "<group>"; };
+		27116E74E1C56C43403DFE1AD9A53D81 /* Color-Picker-for-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Color-Picker-for-iOS-prefix.pch"; sourceTree = "<group>"; };
+		2D29B4FC3160DA585AE8A42A5DBECFA6 /* Color-Picker-for-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Color-Picker-for-iOS.modulemap"; sourceTree = "<group>"; };
+		3ABFC7785D05057F0FF70B75A6AB56F1 /* HRColorCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorCursor.m; path = ColorPicker/HRColorCursor.m; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3E7DE0EFAE38310C265CFD96A6433372 /* HRColorCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorCursor.h; path = ColorPicker/HRColorCursor.h; sourceTree = "<group>"; };
+		4281B1E63B6EDC164E18B8B0579C1CE5 /* HRColorPickerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorPickerView.m; path = ColorPicker/HRColorPickerView.m; sourceTree = "<group>"; };
+		502CDBFC3BE8820A4643C45B6BFDE2CD /* Color-Picker-for-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Color-Picker-for-iOS-umbrella.h"; sourceTree = "<group>"; };
+		5FBBBFA8DCCD318FACDDB2A5EE148AA3 /* HRColorInfoView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorInfoView.m; path = ColorPicker/HRColorInfoView.m; sourceTree = "<group>"; };
+		60952B972B22C444E39ED25E8B99A71A /* HRHSVColorUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRHSVColorUtil.h; path = ColorPicker/HRHSVColorUtil.h; sourceTree = "<group>"; };
+		63E0FEF1EDA0D3356EA9FE82AC976F2C /* HRColorPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorPickerView.h; path = ColorPicker/HRColorPickerView.h; sourceTree = "<group>"; };
+		643E3C71B40D7BDB8619D7967B1C0511 /* Color_Picker_for_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Color_Picker_for_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CBA717F2BE884930E8AF1F61B40DB4 /* HRColorInfoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRColorInfoView.h; path = ColorPicker/HRColorInfoView.h; sourceTree = "<group>"; };
+		8958EF09B23A4F10B3777238B6D7A6CB /* Pods-FinancesApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FinancesApp-dummy.m"; sourceTree = "<group>"; };
+		8A1708ED5C2417305CD80B932CDB213F /* Pods-FinancesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FinancesApp.release.xcconfig"; sourceTree = "<group>"; };
+		94D59C3A9519649A0FA6B799DC8B0778 /* Pods_FinancesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B82B6C8F4111EFED62D751B9E01853F /* Color-Picker-for-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Color-Picker-for-iOS.xcconfig"; sourceTree = "<group>"; };
+		9BA94BCAFAD14FEFAD03067916A1EDF2 /* Pods-FinancesApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FinancesApp-umbrella.h"; sourceTree = "<group>"; };
+		AC514FE85900DA98AEC76CDC402908E5 /* Pods-FinancesApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FinancesApp.modulemap"; sourceTree = "<group>"; };
+		ADC22CC7785EEC8D7AC0AFDB28CC3AAB /* Pods-FinancesApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FinancesApp-frameworks.sh"; sourceTree = "<group>"; };
+		B21F94B89AD40C87F761ED861C0DF77A /* UIImage+CoreGraphics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CoreGraphics.m"; path = "ColorPicker/UIImage+CoreGraphics.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC4441A3B357E0844BD1BB66933679EC /* HRColorMapView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRColorMapView.m; path = ColorPicker/HRColorMapView.m; sourceTree = "<group>"; };
+		BD822A3BC979A6543892D00E2EDFFC92 /* HRBrightnessCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessCursor.m; path = ColorPicker/HRBrightnessCursor.m; sourceTree = "<group>"; };
+		BF4D47FB80D3460A514A47BF717C3FC0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C152FD0BDAB2375A3168E97178728A93 /* Color-Picker-for-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Color-Picker-for-iOS-dummy.m"; sourceTree = "<group>"; };
+		C46FA6CA6AC7E01A01B995354E15714E /* HRBrightnessSlider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HRBrightnessSlider.m; path = ColorPicker/HRBrightnessSlider.m; sourceTree = "<group>"; };
+		C598492D3D4734BA110FDBF27B41E588 /* Pods-FinancesApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FinancesApp-resources.sh"; sourceTree = "<group>"; };
+		CC078E1071F78DBAE0630A40EEF1C631 /* Pods-FinancesApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FinancesApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		DCDB71621B5B3C171D4ADE37A3AA36D4 /* HRBrightnessSlider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HRBrightnessSlider.h; path = ColorPicker/HRBrightnessSlider.h; sourceTree = "<group>"; };
+		F4CCFA1CA9491AAC391EC7AE14EF704F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEEAC8BA2D2F5F61E1CAC3EE698105BB /* Pods-FinancesApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FinancesApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3104CA8E563B416C13C6D8432DD32F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7602520BBA74AE3DCD1DED13E107372A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFE2F9017009ACAB0DD3853C8B1C498 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6243C1A85B34FB65BE030159586F1BF1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08D5BE443746A1C0E691610499AD7CCC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF6C502B062ADD18DCE32BE622400DE4 /* Pods-FinancesApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0F7875BC2AA465454A05140429350B54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16B2D9D2201E5571981283F3E94D66E1 /* Color-Picker-for-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		16B2D9D2201E5571981283F3E94D66E1 /* Color-Picker-for-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				24953B8E75359DF87FBD88937512A7D5 /* HRBrightnessCursor.h */,
+				BD822A3BC979A6543892D00E2EDFFC92 /* HRBrightnessCursor.m */,
+				DCDB71621B5B3C171D4ADE37A3AA36D4 /* HRBrightnessSlider.h */,
+				C46FA6CA6AC7E01A01B995354E15714E /* HRBrightnessSlider.m */,
+				3E7DE0EFAE38310C265CFD96A6433372 /* HRColorCursor.h */,
+				3ABFC7785D05057F0FF70B75A6AB56F1 /* HRColorCursor.m */,
+				79CBA717F2BE884930E8AF1F61B40DB4 /* HRColorInfoView.h */,
+				5FBBBFA8DCCD318FACDDB2A5EE148AA3 /* HRColorInfoView.m */,
+				00A7E56788736FE60AD388F1D864B6D5 /* HRColorMapView.h */,
+				BC4441A3B357E0844BD1BB66933679EC /* HRColorMapView.m */,
+				63E0FEF1EDA0D3356EA9FE82AC976F2C /* HRColorPickerView.h */,
+				4281B1E63B6EDC164E18B8B0579C1CE5 /* HRColorPickerView.m */,
+				60952B972B22C444E39ED25E8B99A71A /* HRHSVColorUtil.h */,
+				21AEBEC066D1CD08E13C4C15C8B26E32 /* HRHSVColorUtil.m */,
+				177C47162158588F72324C81347CC77C /* UIImage+CoreGraphics.h */,
+				B21F94B89AD40C87F761ED861C0DF77A /* UIImage+CoreGraphics.m */,
+				BC6DD21A74F5DA393702A8F035E1E6B7 /* Support Files */,
+			);
+			path = "Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0F7875BC2AA465454A05140429350B54 /* Pods */,
+				CDD03C1EC75728480C6016378CCD18B5 /* Products */,
+				08D5BE443746A1C0E691610499AD7CCC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC6DD21A74F5DA393702A8F035E1E6B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D29B4FC3160DA585AE8A42A5DBECFA6 /* Color-Picker-for-iOS.modulemap */,
+				9B82B6C8F4111EFED62D751B9E01853F /* Color-Picker-for-iOS.xcconfig */,
+				C152FD0BDAB2375A3168E97178728A93 /* Color-Picker-for-iOS-dummy.m */,
+				27116E74E1C56C43403DFE1AD9A53D81 /* Color-Picker-for-iOS-prefix.pch */,
+				502CDBFC3BE8820A4643C45B6BFDE2CD /* Color-Picker-for-iOS-umbrella.h */,
+				F4CCFA1CA9491AAC391EC7AE14EF704F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Color-Picker-for-iOS";
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CDD03C1EC75728480C6016378CCD18B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				643E3C71B40D7BDB8619D7967B1C0511 /* Color_Picker_for_iOS.framework */,
+				94D59C3A9519649A0FA6B799DC8B0778 /* Pods_FinancesApp.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF6C502B062ADD18DCE32BE622400DE4 /* Pods-FinancesApp */ = {
+			isa = PBXGroup;
+			children = (
+				BF4D47FB80D3460A514A47BF717C3FC0 /* Info.plist */,
+				AC514FE85900DA98AEC76CDC402908E5 /* Pods-FinancesApp.modulemap */,
+				FEEAC8BA2D2F5F61E1CAC3EE698105BB /* Pods-FinancesApp-acknowledgements.markdown */,
+				CC078E1071F78DBAE0630A40EEF1C631 /* Pods-FinancesApp-acknowledgements.plist */,
+				8958EF09B23A4F10B3777238B6D7A6CB /* Pods-FinancesApp-dummy.m */,
+				ADC22CC7785EEC8D7AC0AFDB28CC3AAB /* Pods-FinancesApp-frameworks.sh */,
+				C598492D3D4734BA110FDBF27B41E588 /* Pods-FinancesApp-resources.sh */,
+				9BA94BCAFAD14FEFAD03067916A1EDF2 /* Pods-FinancesApp-umbrella.h */,
+				1A1875A243E5858C9EB77F937A36EA38 /* Pods-FinancesApp.debug.xcconfig */,
+				8A1708ED5C2417305CD80B932CDB213F /* Pods-FinancesApp.release.xcconfig */,
+			);
+			name = "Pods-FinancesApp";
+			path = "Target Support Files/Pods-FinancesApp";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		922FCE9FA0CBCDDD56C3D422CD15C151 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8BE0D6CDAC94F1F96D19102887CD10 /* Color-Picker-for-iOS-umbrella.h in Headers */,
+				A18632479F59E1C4B3241E9368AE1BA6 /* HRBrightnessCursor.h in Headers */,
+				B1F209F1B36DFD46F1CA5361E56A60CE /* HRBrightnessSlider.h in Headers */,
+				13D5F2F5EE87B9173C53DAC4AF5CFCF7 /* HRColorCursor.h in Headers */,
+				06F9D5B0A08F646898261BB65A217B1F /* HRColorInfoView.h in Headers */,
+				29AB211B9BBC794A201AF32834D14EB3 /* HRColorMapView.h in Headers */,
+				253365ED746B376833EE612310217FB8 /* HRColorPickerView.h in Headers */,
+				786D660F8ADBE96EA2C9298FB2B228BD /* HRHSVColorUtil.h in Headers */,
+				049234E79644050BD82B3C42DA42ADCD /* UIImage+CoreGraphics.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D46AC3F7DE5225BCC47CCDD44ED2C38A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A1F98992EC06BA159A2EB68BC1EA9CA /* Pods-FinancesApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D5C39A384113396D5D6A52DBD43367E5 /* Color-Picker-for-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA54B696B3A33BEC7C1571FDDA49C1ED /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */;
+			buildPhases = (
+				AE69E7D7370F44CA43E3DB5021936BDB /* Sources */,
+				8EFE2F9017009ACAB0DD3853C8B1C498 /* Frameworks */,
+				922FCE9FA0CBCDDD56C3D422CD15C151 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Color-Picker-for-iOS";
+			productName = "Color-Picker-for-iOS";
+			productReference = 643E3C71B40D7BDB8619D7967B1C0511 /* Color_Picker_for_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F7D5115F0B05F914D069F470F40A8466 /* Pods-FinancesApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED264C91A2E790F0D5B298C7A1421E83 /* Build configuration list for PBXNativeTarget "Pods-FinancesApp" */;
+			buildPhases = (
+				369E43C0C8C1610AAC7189304C88D9EE /* Sources */,
+				3104CA8E563B416C13C6D8432DD32F12 /* Frameworks */,
+				D46AC3F7DE5225BCC47CCDD44ED2C38A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A292C1ACD0B6B294AA7EDCBA5FAD4262 /* PBXTargetDependency */,
+			);
+			name = "Pods-FinancesApp";
+			productName = "Pods-FinancesApp";
+			productReference = 94D59C3A9519649A0FA6B799DC8B0778 /* Pods_FinancesApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CDD03C1EC75728480C6016378CCD18B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5C39A384113396D5D6A52DBD43367E5 /* Color-Picker-for-iOS */,
+				F7D5115F0B05F914D069F470F40A8466 /* Pods-FinancesApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		369E43C0C8C1610AAC7189304C88D9EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFCD7DF1DE5E29626250A8C1AAAD665 /* Pods-FinancesApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE69E7D7370F44CA43E3DB5021936BDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CE641433C1E1EC5AEF783E38FA16F42 /* Color-Picker-for-iOS-dummy.m in Sources */,
+				4D8CDD78D5F0266C4E6DECAD324878E9 /* HRBrightnessCursor.m in Sources */,
+				21C6C243493DDC45B6EBB5205AE74643 /* HRBrightnessSlider.m in Sources */,
+				C9ED838DBDF07B56482212342D844739 /* HRColorCursor.m in Sources */,
+				563AE4C208F246E5CF42D2F83037BC2B /* HRColorInfoView.m in Sources */,
+				E007D509CE8470E8D043A503B736C6FE /* HRColorMapView.m in Sources */,
+				C0271C33FE3B15172E01119CA620703D /* HRColorPickerView.m in Sources */,
+				F8863E62C9179AD71C5695B45002A7ED /* HRHSVColorUtil.m in Sources */,
+				979979057E77525A3108142C327633BB /* UIImage+CoreGraphics.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A292C1ACD0B6B294AA7EDCBA5FAD4262 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Color-Picker-for-iOS";
+			target = D5C39A384113396D5D6A52DBD43367E5 /* Color-Picker-for-iOS */;
+			targetProxy = 60541E89853FB80F0B9D8358875046B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CEC558B57E15ACCF402E0D884E1F979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B82B6C8F4111EFED62D751B9E01853F /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Color-Picker-for-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Color_Picker_for_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		74708D465926BF797A0ED2C7A3F95E67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B82B6C8F4111EFED62D751B9E01853F /* Color-Picker-for-iOS.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Color-Picker-for-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Color-Picker-for-iOS/Color-Picker-for-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Color_Picker_for_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9ED4689C9F659CE50FF3C8EE9AEF96BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1708ED5C2417305CD80B932CDB213F /* Pods-FinancesApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinancesApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinancesApp/Pods-FinancesApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FinancesApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E6563B3D5EE3A49DB3F0747FABB6E4CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A1875A243E5858C9EB77F937A36EA38 /* Pods-FinancesApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FinancesApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FinancesApp/Pods-FinancesApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_FinancesApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA54B696B3A33BEC7C1571FDDA49C1ED /* Build configuration list for PBXNativeTarget "Color-Picker-for-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74708D465926BF797A0ED2C7A3F95E67 /* Debug */,
+				1CEC558B57E15ACCF402E0D884E1F979 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED264C91A2E790F0D5B298C7A1421E83 /* Build configuration list for PBXNativeTarget "Pods-FinancesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6563B3D5EE3A49DB3F0747FABB6E4CC /* Debug */,
+				9ED4689C9F659CE50FF3C8EE9AEF96BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
