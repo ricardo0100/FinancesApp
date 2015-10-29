@@ -8,8 +8,23 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class TransactionsCollectionViewController: UICollectionViewController {
+
+    let reuseIdentifier = "TransactionCell"
     
+    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 500
+    }
+    
+    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
+        
+        cell.backgroundColor = UIColor.random()
+        
+        return cell
+    }
 }

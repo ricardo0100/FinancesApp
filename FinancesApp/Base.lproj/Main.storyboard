@@ -188,8 +188,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="b4U-Vk-LjL" kind="relationship" relationship="viewControllers" id="r72-nF-qvJ"/>
                         <segue destination="XDU-Hq-coX" kind="relationship" relationship="viewControllers" id="AIA-Sb-Zmt"/>
+                        <segue destination="b4U-Vk-LjL" kind="relationship" relationship="viewControllers" id="r72-nF-qvJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7J-F2-nfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,10 +237,10 @@
             </objects>
             <point key="canvasLocation" x="1319" y="99"/>
         </scene>
-        <!--Movimentações-->
+        <!--Transactions Collection View Controller-->
         <scene sceneID="gnf-GT-MIb">
             <objects>
-                <collectionViewController title="Movimentações" id="m9c-Gw-xwz" customClass="TransactionsCollectionViewController" customModule="FinancesApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="m9c-Gw-xwz" customClass="TransactionsCollectionViewController" customModule="FinancesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aU2-Mq-EMq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,9 +253,9 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TransactionCell" id="5PD-N7-HdS">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TransactionCell" id="Mt6-q1-net">
                                 <rect key="frame" x="0.0" y="64" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -263,6 +263,8 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="customSize" width="50" height="50"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -270,12 +272,14 @@
                             <outlet property="delegate" destination="m9c-Gw-xwz" id="jBU-Um-vxo"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Transactions" id="rlf-yb-U9q"/>
+                    <navigationItem key="navigationItem" id="rlf-yb-U9q">
+                        <nil key="title"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hi-xo-Axi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="1490"/>
+            <point key="canvasLocation" x="836" y="1490"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="ANR-cl-wDX">
