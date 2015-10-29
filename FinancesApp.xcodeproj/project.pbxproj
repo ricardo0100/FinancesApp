@@ -43,7 +43,6 @@
 		42D38624ED9862FAC03CC326 /* Pods-FinancesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancesApp/Pods-FinancesApp.release.xcconfig"; sourceTree = "<group>"; };
 		60C03B105745BA6FD5D8F5B3 /* Pods_FinancesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryTableViewController.swift; sourceTree = "<group>"; };
-		BAF4E40A1BE066A300D06AF1 /* HRColorPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HRColorPickerView.h; sourceTree = "<group>"; };
 		BAF8A3F71BD57C5A00443384 /* FinancesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF8A3FF1BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Category.storyboard; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 			children = (
 				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
 				BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */,
-				BAF4E40A1BE066A300D06AF1 /* HRColorPickerView.h */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -123,13 +121,6 @@
 				BAF8A4061BD57C5A00443384 /* Info.plist */,
 			);
 			name = App;
-			sourceTree = "<group>";
-		};
-		BAC12CE21BE232D100AB3A31 /* References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = References;
 			sourceTree = "<group>";
 		};
 		BAF8A3EE1BD57C5A00443384 = {
@@ -157,7 +148,6 @@
 		BAF8A3F91BD57C5A00443384 /* FinancesApp */ = {
 			isa = PBXGroup;
 			children = (
-				BAC12CE21BE232D100AB3A31 /* References */,
 				BA4955881BDC223B00169B4D /* View */,
 				BA49558A1BDC2ED600169B4D /* View Controller */,
 				BA4955891BDC2EC000169B4D /* View Model */,
@@ -556,7 +546,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.ricardo0100.FinancesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = FinancesApp/HRColorPickerView.h;
 			};
 			name = Debug;
 		};
@@ -572,7 +561,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.ricardo0100.FinancesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = FinancesApp/HRColorPickerView.h;
 			};
 			name = Release;
 		};
