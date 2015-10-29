@@ -240,7 +240,7 @@
         <!--Movimentações-->
         <scene sceneID="gnf-GT-MIb">
             <objects>
-                <collectionViewController title="Movimentações" id="m9c-Gw-xwz" sceneMemberID="viewController">
+                <collectionViewController title="Movimentações" id="m9c-Gw-xwz" customClass="TransactionsCollectionViewController" customModule="FinancesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aU2-Mq-EMq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

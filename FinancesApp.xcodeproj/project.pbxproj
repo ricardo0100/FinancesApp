@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		91B4A7E04DE9FF0219D2447F /* Pods_FinancesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C03B105745BA6FD5D8F5B3 /* Pods_FinancesApp.framework */; };
 		BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */; };
+		BAC12CE61BE233AF00AB3A31 /* TransactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC12CE51BE233AF00AB3A31 /* TransactionsCollectionViewController.swift */; };
 		BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */; };
-		BAF8A4001BD57C5A00443384 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A3FE1BD57C5A00443384 /* Category.storyboard */; };
+		BAF8A4001BD57C5A00443384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A3FE1BD57C5A00443384 /* Main.storyboard */; };
 		BAF8A4021BD57C5A00443384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A4011BD57C5A00443384 /* Assets.xcassets */; };
 		BAF8A4051BD57C5A00443384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */; };
 		BAF8A4101BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A40F1BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift */; };
@@ -43,9 +44,10 @@
 		42D38624ED9862FAC03CC326 /* Pods-FinancesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancesApp/Pods-FinancesApp.release.xcconfig"; sourceTree = "<group>"; };
 		60C03B105745BA6FD5D8F5B3 /* Pods_FinancesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryTableViewController.swift; sourceTree = "<group>"; };
+		BAC12CE51BE233AF00AB3A31 /* TransactionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		BAF8A3F71BD57C5A00443384 /* FinancesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAF8A3FF1BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Category.storyboard; sourceTree = "<group>"; };
+		BAF8A3FF1BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAF8A4011BD57C5A00443384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAF8A4041BD57C5A00443384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAF8A4061BD57C5A00443384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF8A4011BD57C5A00443384 /* Assets.xcassets */,
-				BAF8A3FE1BD57C5A00443384 /* Category.storyboard */,
+				BAF8A3FE1BD57C5A00443384 /* Main.storyboard */,
 				BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */,
 				BA49558D1BDC2F6D00169B4D /* App */,
 			);
@@ -108,8 +110,8 @@
 		BA49558A1BDC2ED600169B4D /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
-				BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */,
+				BAC12CE41BE2337200AB3A31 /* Transaction */,
+				BAC12CE31BE2336900AB3A31 /* Category */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -121,6 +123,23 @@
 				BAF8A4061BD57C5A00443384 /* Info.plist */,
 			);
 			name = App;
+			sourceTree = "<group>";
+		};
+		BAC12CE31BE2336900AB3A31 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A4351BD58ADD00443384 /* ListCategoriesTableViewController.swift */,
+				BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		BAC12CE41BE2337200AB3A31 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				BAC12CE51BE233AF00AB3A31 /* TransactionsCollectionViewController.swift */,
+			);
+			name = Transaction;
 			sourceTree = "<group>";
 		};
 		BAF8A3EE1BD57C5A00443384 = {
@@ -318,7 +337,7 @@
 			files = (
 				BAF8A4051BD57C5A00443384 /* LaunchScreen.storyboard in Resources */,
 				BAF8A4021BD57C5A00443384 /* Assets.xcassets in Resources */,
-				BAF8A4001BD57C5A00443384 /* Category.storyboard in Resources */,
+				BAF8A4001BD57C5A00443384 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +415,7 @@
 				BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */,
 				BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */,
 				BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */,
+				BAC12CE61BE233AF00AB3A31 /* TransactionsCollectionViewController.swift in Sources */,
 				BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,12 +452,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BAF8A3FE1BD57C5A00443384 /* Category.storyboard */ = {
+		BAF8A3FE1BD57C5A00443384 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BAF8A3FF1BD57C5A00443384 /* Base */,
 			);
-			name = Category.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		BAF8A4031BD57C5A00443384 /* LaunchScreen.storyboard */ = {
