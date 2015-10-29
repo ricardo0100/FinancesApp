@@ -125,6 +125,13 @@
 			name = App;
 			sourceTree = "<group>";
 		};
+		BAC12CE21BE232D100AB3A31 /* References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = References;
+			sourceTree = "<group>";
+		};
 		BAF8A3EE1BD57C5A00443384 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +157,7 @@
 		BAF8A3F91BD57C5A00443384 /* FinancesApp */ = {
 			isa = PBXGroup;
 			children = (
+				BAC12CE21BE232D100AB3A31 /* References */,
 				BA4955881BDC223B00169B4D /* View */,
 				BA49558A1BDC2ED600169B4D /* View Controller */,
 				BA4955891BDC2EC000169B4D /* View Model */,
