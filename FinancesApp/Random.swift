@@ -23,13 +23,11 @@ extension Int {
 extension UIColor {
     static func random() -> UIColor {
         let range = Range<Int>(start: 0, end: 255)
-        let rangeAlpha = Range<Int>(start: 100, end: 255)
         
         let red = CGFloat(Double(Int.random(range)) / 255)
         let green = CGFloat(Double(Int.random(range)) / 255)
         let blue = CGFloat(Double(Int.random(range)) / 255)
-        let alpha = CGFloat(Double(Int.random(rangeAlpha)) / 255)
         
-        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
 }
