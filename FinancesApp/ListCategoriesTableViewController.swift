@@ -54,6 +54,18 @@ class ListCategoriesTableViewController: UITableViewController, UISearchResultsU
         tableView.reloadData()
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Edit Category" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let viewController = navigationController.viewControllers[0] as! NewCategoryTableViewController
+            
+            let indexPath = tableView.indexPathForCell((sender as! UITableViewCell))
+            let category = categoryList![indexPath!.row]
+            
+            viewController.category = category
+        }
+    }
+    
     //MARK: Unwind Segues
     
     @IBAction func backToListCategoriesTableViewController(segue:UIStoryboardSegue) {

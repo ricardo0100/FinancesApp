@@ -11,6 +11,8 @@ import Color_Picker_for_iOS
 
 class NewCategoryTableViewController: UITableViewController {
 
+    var category: CategoryModel?
+    
     //TODO: Replace gateway from View Controller to Model View Layer
     var categoryGateway: CategoryGatewayProtocol = CategoryGatewayInMemory.sharedInstance
     
@@ -24,9 +26,15 @@ class NewCategoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
         colorPickerView.colorMapView = colorPickerMapView
 //        colorPickerView.addTarget(self, action: "colorChanged:", forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func loadData() {
+        if let categoryData = category {
+            categoryNameTextField.text = categoryData.name
+        }
     }
     
     //MARK: Actions

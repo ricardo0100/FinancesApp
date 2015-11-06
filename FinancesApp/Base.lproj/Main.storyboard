@@ -25,7 +25,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="dbE-bM-0uR" kind="show" identifier="Detail Category" id="356-z6-tM0"/>
+                                    <segue destination="jAn-UH-JJm" kind="presentation" identifier="Edit Category" id="2l6-sj-BfQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -279,26 +279,6 @@
             </objects>
             <point key="canvasLocation" x="836" y="1490"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ANR-cl-wDX">
-            <objects>
-                <tableViewController id="dbE-bM-0uR" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ri8-2D-aT1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="dbE-bM-0uR" id="N36-0J-GyY"/>
-                            <outlet property="delegate" destination="dbE-bM-0uR" id="ESD-J8-ihA"/>
-                        </connections>
-                    </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="axf-t6-76q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1319" y="753"/>
-        </scene>
         <!--Movimentações-->
         <scene sceneID="Nb0-Cc-40G">
             <objects>
@@ -324,4 +304,7 @@
         <image name="ic_dashboard_white" width="24" height="24"/>
         <image name="ic_list_white" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2l6-sj-BfQ"/>
+    </inferredMetricsTieBreakers>
 </document>
