@@ -10,13 +10,11 @@ import Foundation
 
 struct CategoryModel {
     
-    init() {
+    init () {
     }
-    
-    init (id: Int, name: String, color: String?) {
-        self.id = id
+        
+    init (name: String) {
         self.name = name
-        self.color = color
     }
     
     var id: Int = 0

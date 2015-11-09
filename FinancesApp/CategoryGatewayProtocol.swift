@@ -11,7 +11,7 @@ import Foundation
 protocol CategoryGatewayProtocol {
     
     func all() -> [CategoryModel]
-    func save(category: CategoryModel) -> Bool
+    func save(category: CategoryModel) -> (Bool, Int)
     func register(with id: Int) -> CategoryModel?
     func register(with text: String) -> [CategoryModel]
     

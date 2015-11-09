@@ -11,7 +11,7 @@ import Color_Picker_for_iOS
 
 class NewCategoryTableViewController: UITableViewController {
 
-    var category: CategoryModel?
+    var category: CategoryModel = CategoryModel()
     
     //TODO: Replace gateway from View Controller to Model View Layer
     var categoryGateway: CategoryGatewayProtocol = CategoryGatewayInMemory.sharedInstance
@@ -28,18 +28,15 @@ class NewCategoryTableViewController: UITableViewController {
     }
     
     func loadData() {
-        if let categoryData = category {
-            categoryNameTextField.text = categoryData.name
-        }
+        categoryNameTextField.text = category.name
     }
     
     //MARK: Actions
     
     @IBAction func saveCategoryPressed(sender: UIBarButtonItem) {
-        var newCategory = CategoryModel()
-        newCategory.name = categoryNameTextField.text!
+        category.name = categoryNameTextField.text!
         
-        categoryGateway.save(newCategory)
+        categoryGateway.save(category)
 
         performSegueWithIdentifier("backToListCategoriesTableViewController", sender: sender)
     }

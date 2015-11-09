@@ -12,7 +12,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     
     static let sharedInstance = CategoryGatewayInMemory(withExamples: true)
     
-    var categoryList = [CategoryModel]()
+    var categoryList = [Int: CategoryModel]()
     var increment = 0
     
     // MARK: Init
@@ -33,18 +33,22 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     // MARK: - GatewayProtocol Implementation
     
     func all() -> [CategoryModel] {
-        return categoryList
+        return [CategoryModel](categoryList.values)
     }
     
-    func save(category: CategoryModel) -> Bool {
-        var register = category
-        if validate(register) {
-            increment++
-            register.id = increment
-            categoryList.append(register)
-            return true
+    func save(category: CategoryModel) -> (Bool, Int) {
+        var reg = category
+        if validate(reg) {
+            if categoryList.keys.contains(category.id) {
+                categoryList[category.id] = reg
+            } else {
+                increment++
+                reg.id = increment
+                categoryList[reg.id] = reg
+            }
+            return (true, reg.id)
         } else {
-            return false
+            return (false, 0)
         }
     }
     
@@ -56,13 +60,11 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     }
     
     func register(with id: Int) -> CategoryModel? {
-        var category: CategoryModel?
-        for cat in categoryList {
-            if cat.id == id {
-                category = cat
-            }
+        if !categoryList.keys.contains(id) {
+            return nil
         }
-        return category
+        
+        return categoryList[id]
     }
     
     func register(with text: String) -> [CategoryModel] {
@@ -72,7 +74,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         
         var filteredList: [CategoryModel] = []
         
-        for cat in categoryList {
+        for (_, cat) in categoryList {
             if cat.name.containsString(text) {
                 filteredList.append(cat)
             }
@@ -88,8 +90,8 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     func generateExampleCategories() {
         for index in 0..<exampleCategories.count {
             let name = exampleCategories[index]
-            let category = CategoryModel(id: index, name: name, color: nil)
-            categoryList += [category]
+            let category = CategoryModel(name: name)
+            save(category)
         }
     }
     
@@ -110,9 +112,9 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     }
     
     func generateRandomCategories(numberOfCategories: Int) {
-        for index in 0..<numberOfCategories {
-            let category = CategoryModel(id: index, name: randomWord(), color: nil)
-            categoryList += [category]
+        for _ in 0..<numberOfCategories {
+            let category = CategoryModel(name: randomWord())
+            save(category)
         }
     }
     
