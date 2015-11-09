@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wUQ-UR-bS8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Categories-->
@@ -84,66 +83,6 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Category Name Cell" rowHeight="400" id="lF7-Qg-6qA">
-                                        <rect key="frame" x="0.0" y="108" width="320" height="400"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lF7-Qg-6qA" id="E4Q-gj-P1Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="399"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yf4-yN-jcW" customClass="HRColorPickerView">
-                                                    <rect key="frame" x="8" y="8" width="304" height="383"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXo-kh-TaM" customClass="HRColorMapView">
-                                                            <rect key="frame" x="-8" y="33" width="312" height="350"/>
-                                                            <animations/>
-                                                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                            <userDefinedRuntimeAttributes>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="saturationUpperLimit">
-                                                                    <real key="value" value="0.94999999999999996"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="tileSize">
-                                                                    <integer key="value" value="1"/>
-                                                                </userDefinedRuntimeAttribute>
-                                                            </userDefinedRuntimeAttributes>
-                                                        </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AF4-PV-1Rw" customClass="HRColorPickerView">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="25"/>
-                                                            <animations/>
-                                                            <color key="backgroundColor" red="0.23529411759999999" green="0.50980392159999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="25" id="wEW-s9-ZpG"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <animations/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="eXo-kh-TaM" secondAttribute="trailingMargin" id="Akp-v0-SwN"/>
-                                                        <constraint firstItem="eXo-kh-TaM" firstAttribute="top" secondItem="AF4-PV-1Rw" secondAttribute="bottom" constant="8" symbolic="YES" id="AvO-gD-Yc5"/>
-                                                        <constraint firstItem="eXo-kh-TaM" firstAttribute="leadingMargin" secondItem="Yf4-yN-jcW" secondAttribute="leading" id="BNU-Pc-nNa"/>
-                                                        <constraint firstItem="AF4-PV-1Rw" firstAttribute="leadingMargin" secondItem="Yf4-yN-jcW" secondAttribute="leadingMargin" id="YHA-yt-rHs"/>
-                                                        <constraint firstAttribute="bottomMargin" secondItem="eXo-kh-TaM" secondAttribute="bottomMargin" id="j33-nh-tAz"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="AF4-PV-1Rw" secondAttribute="trailingMargin" id="sPt-e8-eL5"/>
-                                                        <constraint firstItem="AF4-PV-1Rw" firstAttribute="top" secondItem="Yf4-yN-jcW" secondAttribute="top" id="uJI-xK-Vft"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                            <color key="value" red="0.39215686917304993" green="0.80000001192092896" blue="0.60392159223556519" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
-                                            </subviews>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Yf4-yN-jcW" secondAttribute="trailing" id="2bS-QA-H7Z"/>
-                                                <constraint firstItem="Yf4-yN-jcW" firstAttribute="top" secondItem="E4Q-gj-P1Z" secondAttribute="topMargin" id="IGz-R3-Ean"/>
-                                                <constraint firstItem="Yf4-yN-jcW" firstAttribute="leading" secondItem="E4Q-gj-P1Z" secondAttribute="leadingMargin" id="asT-8i-rV5"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Yf4-yN-jcW" secondAttribute="bottom" id="rAl-Tk-PzV"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -167,8 +106,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="categoryNameTextField" destination="Prv-aL-k6Q" id="AjY-4g-NCI"/>
-                        <outlet property="colorPickerMapView" destination="eXo-kh-TaM" id="bvv-45-rUp"/>
-                        <outlet property="colorPickerView" destination="Yf4-yN-jcW" id="vPO-1R-PpI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrX-gM-Bjy" userLabel="First Responder" sceneMemberID="firstResponder"/>

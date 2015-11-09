@@ -19,16 +19,12 @@ class NewCategoryTableViewController: UITableViewController {
     //MARK: Outlets
     
     @IBOutlet weak var categoryNameTextField: UITextField!
-    @IBOutlet weak var colorPickerView: HRColorPickerView!
-    @IBOutlet weak var colorPickerMapView: HRColorMapView!
     
     //MARK: ViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
-        colorPickerView.colorMapView = colorPickerMapView
-//        colorPickerView.addTarget(self, action: "colorChanged:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func loadData() {
@@ -47,9 +43,4 @@ class NewCategoryTableViewController: UITableViewController {
 
         performSegueWithIdentifier("backToListCategoriesTableViewController", sender: sender)
     }
-    
-    @IBAction func colorChanged(sender: HRColorPickerView) {
-        
-    }
-    
 }
