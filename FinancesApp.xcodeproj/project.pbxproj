@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		91B4A7E04DE9FF0219D2447F /* Pods_FinancesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C03B105745BA6FD5D8F5B3 /* Pods_FinancesApp.framework */; };
+		BA02DD821BF91AE10028417D /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02DD811BF91AE10028417D /* TransactionModel.swift */; };
+		BA02DD861BF91D060028417D /* TransactionGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02DD851BF91D060028417D /* TransactionGatewayProtocol.swift */; };
+		BA02DD881BF91E0A0028417D /* TransactionGatewayInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02DD871BF91E0A0028417D /* TransactionGatewayInMemory.swift */; };
 		BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */; };
+		BAB4D20A1BF2D97C00663D9E /* TransactionGatewayInMemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB4D2091BF2D97B00663D9E /* TransactionGatewayInMemoryTests.swift */; };
 		BAC12CE61BE233AF00AB3A31 /* TransactionsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC12CE51BE233AF00AB3A31 /* TransactionsCollectionViewController.swift */; };
 		BAC12CE91BE23E7500AB3A31 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC12CE81BE23E7500AB3A31 /* Random.swift */; };
 		BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF8A3FA1BD57C5A00443384 /* AppDelegate.swift */; };
@@ -44,7 +48,11 @@
 		0ABAD6067BC1FC3B7F990D60 /* Pods-FinancesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinancesApp/Pods-FinancesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		42D38624ED9862FAC03CC326 /* Pods-FinancesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancesApp/Pods-FinancesApp.release.xcconfig"; sourceTree = "<group>"; };
 		60C03B105745BA6FD5D8F5B3 /* Pods_FinancesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA02DD811BF91AE10028417D /* TransactionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		BA02DD851BF91D060028417D /* TransactionGatewayProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGatewayProtocol.swift; sourceTree = "<group>"; };
+		BA02DD871BF91E0A0028417D /* TransactionGatewayInMemory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGatewayInMemory.swift; sourceTree = "<group>"; };
 		BA49558F1BDC372100169B4D /* NewCategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCategoryTableViewController.swift; sourceTree = "<group>"; };
+		BAB4D2091BF2D97B00663D9E /* TransactionGatewayInMemoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionGatewayInMemoryTests.swift; sourceTree = "<group>"; };
 		BAC12CE51BE233AF00AB3A31 /* TransactionsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsCollectionViewController.swift; sourceTree = "<group>"; };
 		BAC12CE81BE23E7500AB3A31 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		BAF8A3F71BD57C5A00443384 /* FinancesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +99,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA02DD831BF91C370028417D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BAF8A42D1BD5899900443384 /* CategoryGatewayProtocol.swift */,
+				BAF8A4381BD597DC00443384 /* CategoryGatewayInMemory.swift */,
+				BAF8A42A1BD5814700443384 /* CategoryModel.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		BA02DD841BF91C970028417D /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				BA02DD811BF91AE10028417D /* TransactionModel.swift */,
+				BA02DD851BF91D060028417D /* TransactionGatewayProtocol.swift */,
+				BA02DD871BF91E0A0028417D /* TransactionGatewayInMemory.swift */,
+			);
+			name = Transaction;
+			sourceTree = "<group>";
+		};
 		BA4955881BDC223B00169B4D /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				BAF8A40F1BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift */,
+				BAB4D2091BF2D97B00663D9E /* TransactionGatewayInMemoryTests.swift */,
 				BAF8A4111BD57C5A00443384 /* Info.plist */,
 			);
 			path = FinancesAppTests;
@@ -207,19 +236,10 @@
 		BAF8A4291BD5812D00443384 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BAF8A42C1BD5898000443384 /* Gateway */,
-				BAF8A42A1BD5814700443384 /* CategoryModel.swift */,
+				BA02DD831BF91C370028417D /* Category */,
+				BA02DD841BF91C970028417D /* Transaction */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		BAF8A42C1BD5898000443384 /* Gateway */ = {
-			isa = PBXGroup;
-			children = (
-				BAF8A42D1BD5899900443384 /* CategoryGatewayProtocol.swift */,
-				BAF8A4381BD597DC00443384 /* CategoryGatewayInMemory.swift */,
-			);
-			name = Gateway;
 			sourceTree = "<group>";
 		};
 		C49DC60124C4523B5FCF61CD /* Pods */ = {
@@ -421,13 +441,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA02DD821BF91AE10028417D /* TransactionModel.swift in Sources */,
 				BAF8A42E1BD5899900443384 /* CategoryGatewayProtocol.swift in Sources */,
 				BAF8A3FB1BD57C5A00443384 /* AppDelegate.swift in Sources */,
 				BAF8A4391BD597DC00443384 /* CategoryGatewayInMemory.swift in Sources */,
+				BA02DD861BF91D060028417D /* TransactionGatewayProtocol.swift in Sources */,
 				BAC12CE91BE23E7500AB3A31 /* Random.swift in Sources */,
 				BAF8A42B1BD5814700443384 /* CategoryModel.swift in Sources */,
 				BA4955901BDC372100169B4D /* NewCategoryTableViewController.swift in Sources */,
 				BAC12CE61BE233AF00AB3A31 /* TransactionsCollectionViewController.swift in Sources */,
+				BA02DD881BF91E0A0028417D /* TransactionGatewayInMemory.swift in Sources */,
 				BAF8A4361BD58ADD00443384 /* ListCategoriesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF8A4101BD57C5A00443384 /* CategoryGatewayInMemoryTests.swift in Sources */,
+				BAB4D20A1BF2D97C00663D9E /* TransactionGatewayInMemoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

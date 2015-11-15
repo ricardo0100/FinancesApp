@@ -52,6 +52,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         }
     }
     
+    // TODO: Validation should not live in the gateway, maybe a usecase/viewmodel
     func validate(category: CategoryModel) -> Bool {
         if category.name.isEmpty {
             return false
