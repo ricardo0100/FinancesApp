@@ -24,18 +24,19 @@ class CategoryGatewayInMemoryTests: XCTestCase {
     func testSaveCategory() {
         var category = CategoryModel()
         category.name = NAME1
-        let (result, _) = categoryGateway.save(category)
+        let result = categoryGateway.save(&category)
         XCTAssertTrue(result)
         XCTAssertEqual(categoryGateway.all().count, 1)
     }
     
     func testDoNotDuplicateSameIdRegisterOnSave() {
-        let category1 = CategoryModel(name: NAME1)
-        let (_, categoryID) = categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
+        let categoryID = category1.id
         
         var category2 = CategoryModel(name: NAME2)
         category2.id = categoryID
-        categoryGateway.save(category2)
+        categoryGateway.save(&category2)
         
         XCTAssertEqual(categoryGateway.all().count, 1)
         
@@ -44,66 +45,80 @@ class CategoryGatewayInMemoryTests: XCTestCase {
     }
     
     func testCategoryNameIsRequired() {
-        let category = CategoryModel()
-        XCTAssertFalse(categoryGateway.save(category).0)
+        var category = CategoryModel()
+        XCTAssertFalse(categoryGateway.save(&category))
         XCTAssertEqual(categoryGateway.all().count, 0)
     }
     
     func testGetById() {
-        let category1 = CategoryModel(name: NAME1)
-        let (_, id1) = categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
         
-        let category2 = CategoryModel(name: NAME2)
-        let (_, id2) = categoryGateway.save(category2)
+        var category2 = CategoryModel(name: NAME2)
+        categoryGateway.save(&category2)
         
-        let result1 = categoryGateway.register(with: id1)
+        let result1 = categoryGateway.register(with: category1.id)
         XCTAssertEqual(result1?.name, NAME1)
         
-        let result2 = categoryGateway.register(with: id2)
+        let result2 = categoryGateway.register(with: category2.id)
         XCTAssertEqual(result2?.name, NAME2)
     }
     
     func testFilterReturnsNothing() {
-        let category1 = CategoryModel(name: NAME1)
-        categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
         
-        let category2 = CategoryModel(name: NAME2)
-        categoryGateway.save(category2)
+        var category2 = CategoryModel(name: NAME2)
+        categoryGateway.save(&category2)
         
         let result = categoryGateway.register(with: NAME3)
         XCTAssertEqual(result.count, 0)
     }
     
     func testFilterReturnsOneResult() {
-        let category1 = CategoryModel(name: NAME1)
-        categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
         
-        let category2 = CategoryModel(name: NAME2)
-        categoryGateway.save(category2)
+        var category2 = CategoryModel(name: NAME2)
+        categoryGateway.save(&category2)
         
         let result = categoryGateway.register(with: NAME1)
         XCTAssertEqual(result.count, 1)
     }
     
     func testFilterReturnsTwoResults() {
-        let category1 = CategoryModel(name: NAME1)
-        categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
         
-        let category2 = CategoryModel(name: NAME1)
-        categoryGateway.save(category2)
+        var category2 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category2)
         
         let result = categoryGateway.register(with: NAME1)
         XCTAssertEqual(result.count, 2)
     }
     
     func testFilterWithWhiteTextReturnsverything() {
-        let category1 = CategoryModel(name: NAME1)
-        categoryGateway.save(category1)
+        var category1 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category1)
 
-        let category2 = CategoryModel(name: NAME1)
-        categoryGateway.save(category2)
+        var category2 = CategoryModel(name: NAME1)
+        categoryGateway.save(&category2)
         
         let result = categoryGateway.register(with: "")
         XCTAssertEqual(result.count, 2)
     }
+    
+    func testIfCategoryIsNewReturnsTrue() {
+        let category = CategoryModel(name: NAME1)
+        
+        XCTAssertTrue(category.isNew())
+    }
+    
+    func testIfCategoryIsNewReturnsFalse() {
+        var category = CategoryModel(name: NAME1)
+        categoryGateway.save(&category)
+        
+        XCTAssertFalse(category.isNew())
+    }
+    
 }

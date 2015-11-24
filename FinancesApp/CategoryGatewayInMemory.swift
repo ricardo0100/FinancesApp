@@ -36,19 +36,18 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
         return [CategoryModel](categoryList.values)
     }
     
-    func save(category: CategoryModel) -> (Bool, Int) {
-        var reg = category
-        if validate(reg) {
+    func save(inout category: CategoryModel) -> Bool {
+        if validate(category) {
             if categoryList.keys.contains(category.id) {
-                categoryList[category.id] = reg
+                categoryList[category.id] = category
             } else {
                 increment++
-                reg.id = increment
-                categoryList[reg.id] = reg
+                category.id = increment
+                categoryList[category.id] = category
             }
-            return (true, reg.id)
+            return true
         } else {
-            return (false, 0)
+            return false
         }
     }
     
@@ -91,8 +90,8 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     func generateExampleCategories() {
         for index in 0..<exampleCategories.count {
             let name = exampleCategories[index]
-            let category = CategoryModel(name: name)
-            save(category)
+            var category = CategoryModel(name: name)
+            save(&category)
         }
     }
     
@@ -114,8 +113,8 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
     
     func generateRandomCategories(numberOfCategories: Int) {
         for _ in 0..<numberOfCategories {
-            let category = CategoryModel(name: randomWord())
-            save(category)
+            var category = CategoryModel(name: randomWord())
+            save(&category)
         }
     }
     

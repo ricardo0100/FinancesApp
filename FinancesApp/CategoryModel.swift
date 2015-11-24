@@ -21,4 +21,12 @@ struct CategoryModel {
     var name: String = ""
     var color: String?
     
+    func isNew() -> Bool
+    {
+        if id == 0 {
+            return true
+        }
+        
+        return false
+    }
 }

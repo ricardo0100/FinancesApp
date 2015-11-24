@@ -27,8 +27,14 @@ class NewCategoryTableViewController: UITableViewController {
         loadData()
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        navigationController?.setToolbarHidden(true, animated: false)
+    }
+    
     func loadData() {
         categoryNameTextField.text = category.name
+        
+        navigationController?.setToolbarHidden(category.isNew(), animated: true)
     }
     
     //MARK: Actions
@@ -36,8 +42,12 @@ class NewCategoryTableViewController: UITableViewController {
     @IBAction func saveCategoryPressed(sender: UIBarButtonItem) {
         category.name = categoryNameTextField.text!
         
-        categoryGateway.save(category)
+        categoryGateway.save(&category)
 
         performSegueWithIdentifier("backToListCategoriesTableViewController", sender: sender)
+    }
+    
+    @IBAction func deleteCategoryPressed(sender: AnyObject) {
+        print("HEY")
     }
 }
