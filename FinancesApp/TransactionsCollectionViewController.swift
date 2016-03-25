@@ -29,8 +29,8 @@ class TransactionsCollectionViewController: UICollectionViewController {
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let width = Int.random(Range(start: 10, end: 200))
-        let height = Int.random(Range(start: 10, end: 200))
+        let width = Int.random(Range(10 ..< 200))
+        let height = Int.random(Range(10 ..< 200))
         return CGSize(width: width, height: height)
     }
 }

@@ -22,7 +22,7 @@ extension Int {
 
 extension UIColor {
     static func random() -> UIColor {
-        let range = Range<Int>(start: 0, end: 255)
+        let range = Range<Int>(0 ..< 2255)
         
         let red = CGFloat(Double(Int.random(range)) / 255)
         let green = CGFloat(Double(Int.random(range)) / 255)

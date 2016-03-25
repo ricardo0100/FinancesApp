@@ -41,7 +41,7 @@ class CategoryGatewayInMemory: CategoryGatewayProtocol {
             if categoryList.keys.contains(category.id) {
                 categoryList[category.id] = category
             } else {
-                increment++
+                increment += 1
                 category.id = increment
                 categoryList[category.id] = category
             }
